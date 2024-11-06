@@ -1,11 +1,20 @@
 const app = Vue.createApp({
     data(){
         return{
-            intro:'Hello World',
+            intro:'Indtast kunder til kundedatabase',
+            navn: null,
+            efternavn: null,
+            id: null,
+            kundeListe: [],
+
         }
     }, 
     methods: {
-        myMethod(){
+        addMethod(){
+            this.kundeListe.push({navn:this.navn, efternavn:this.efternavn, id:this.id})
+            this.navn=null;
+            this.efternavn=null;
+            this.id=null;
 
         },
     },
